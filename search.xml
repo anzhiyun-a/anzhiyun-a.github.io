@@ -24,7 +24,18 @@
       <link href="/music/index.html"/>
       <url>/music/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>     <div id="aplayer-FWVHsKeV" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="7868005687" data-server="tencent" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="1000px" data-preload="auto" data-theme="#555"    ></div>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>     <div id="aplayer-XUjshrFy" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="7868005687" data-server="tencent" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="1000px" data-preload="auto" data-theme="#555"    ></div>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/manifest.json"/>
+      <url>/manifest.json</url>
+      
+        <content type="html"><![CDATA[{"name":"安陌夕`Blog","short_name":"安陌夕","theme_color":"#3b70fc","background_color":"#3b70fc","display":"standalone","scope":"/","start_url":"/","icons":[{"src":"/img/siteicon/123.png","sizes":"16x16","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"32x32","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"48x48","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"64x64","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"128x128","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"144x144","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"512x512","type":"image/png"}],"splash_pages":null}]]></content>
       
     </entry>
     
