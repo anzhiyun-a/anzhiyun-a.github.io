@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/music/index.html</loc>
+    <loc>https://www.ldyyun.icu/posts/abbrlink.html</loc>
     
     <lastmod>2024-05-05</lastmod>
     
@@ -11,7 +11,34 @@
   </url>
   
   <url>
-    <loc>http://example.com/SQL/index.html</loc>
+    <loc>https://www.ldyyun.icu/photo/beijing/index.html</loc>
+    
+    <lastmod>2024-05-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ldyyun.icu/photo/index.html</loc>
+    
+    <lastmod>2024-05-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ldyyun.icu/music/index.html</loc>
+    
+    <lastmod>2024-05-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ldyyun.icu/SQL/index.html</loc>
     
     <lastmod>2024-04-30</lastmod>
     
@@ -20,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/index.html</loc>
+    <loc>https://www.ldyyun.icu/tags/index.html</loc>
     
     <lastmod>2024-04-30</lastmod>
     
@@ -29,36 +56,9 @@
   </url>
   
   <url>
-    <loc>http://example.com/ohmygirl/index.html</loc>
+    <loc>https://www.ldyyun.icu/manifest.json</loc>
     
     <lastmod>2024-04-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/photo/index.html</loc>
-    
-    <lastmod>2024-04-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/manifest.json</loc>
-    
-    <lastmod>2024-04-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/posts/abbrlink.html</loc>
-    
-    <lastmod>2024-04-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -66,8 +66,8 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
-    <lastmod>2024-05-05</lastmod>
+    <loc>https://www.ldyyun.icu/</loc>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
