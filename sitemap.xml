@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.ldyyun.icu/posts/abbrlink.html</loc>
+    
+    <lastmod>2024-05-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ldyyun.icu/categories/index.html</loc>
+    
+    <lastmod>2024-05-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ldyyun.icu/photo/beijing/index.html</loc>
     
     <lastmod>2024-05-06</lastmod>
@@ -12,15 +30,6 @@
   
   <url>
     <loc>https://www.ldyyun.icu/photo/index.html</loc>
-    
-    <lastmod>2024-05-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ldyyun.icu/posts/abbrlink.html</loc>
     
     <lastmod>2024-05-06</lastmod>
     
@@ -67,12 +76,19 @@
 
   <url>
     <loc>https://www.ldyyun.icu/</loc>
-    <lastmod>2024-05-06</lastmod>
+    <lastmod>2024-05-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
 
+  
+  <url>
+    <loc>https://www.ldyyun.icu/categories/%E9%9A%8F%E8%AE%B0/</loc>
+    <lastmod>2024-05-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
