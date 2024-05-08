@@ -444,7 +444,7 @@ div#category {
 }
 
 /* 侧边栏个人信息卡片动态渐变色 */
-#aside-content > .card-widget.card-info {
+/* #aside-content > .card-widget.card-info {
   background: linear-gradient(
     -45deg,
     #e8d8b9,
@@ -492,12 +492,12 @@ div#category {
   100% {
     background-position: 0% 50%;
   }
-}
+} */
 
 /* 黑夜模式适配 */
-[data-theme="dark"] #aside-content > .card-widget.card-info {
+/* [data-theme="dark"] #aside-content > .card-widget.card-info {
   background: #191919ee;
-}
+} */
 
 /* 个人信息Follow me按钮 */
 #aside-content > .card-widget.card-info > #card-info-btn {
@@ -506,8 +506,8 @@ div#category {
 }
 
 :root {
-  --trans-light: rgba(255, 255, 255, 0.85);
-  --trans-dark: rgba(25, 25, 25, 0.85);
+  --trans-light: rgba(255, 255, 255, 0.45);
+  --trans-dark: rgba(25, 25, 25, 0.45);
   --border-style: 1px solid rgb(169, 169, 169);
   --backdrop-filter: blur(5px) saturate(150%);
 }
@@ -671,7 +671,7 @@ body::-webkit-scrollbar {
   background-size: 100%;
 }
 [data-theme="dark"] #aside-content > .card-widget.card-info {
-  background-image: url(/img/手机.png);
+  background-image: url(https://eeee.ldyyun.icu/as0/QQ%E6%88%AA%E5%9B%BE20240507145037.png);
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100%;
