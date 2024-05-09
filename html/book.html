@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一个有趣的相册</title>
+    <style>
+ *{
+	margin: 0;
+	padding: 0;
+			
+      }
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+            height: 100vh;
+           width: 100vw;
+          display: flex;
+          justify-content: center;
+         align-items: center;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: #0e1729;
+        }
+
+        .button {
+            position: absolute;
+            top: 20px;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.5s ease-in-out;
+        }
+
+        .button:hover {
+            color: transparent;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5);
+        }
+
+        #return-home {
+            left: 20px;
+        }
+
+        #return-previous {
+            left: 150px;
+        }
+
+	 ul{
+                list-style: none;
+                width: 230px;
+                height: 350px;
+                transform-style: preserve-3d;
+                perspective: 900px;
+                transition: 1.5s;
+            }
+            ul:hover{
+                transform: translateX(150px);
+            }
+            li{
+                position: absolute; /* 重叠*/
+                transform-origin: left;
+            }
+            img{
+                width: 230px;
+                height: 350px;
+                border-radius: 20px; /* 圆角 */
+                box-shadow: 1px 4px 5px rgb(0,0,0);
+            }
+            li:nth-child(1){
+                transform: rotateY(-25deg);
+                transition: 2s;
+            }
+            li:nth-child(2){
+                transform: rotateY(-23deg);
+                transition: 1.7s;
+            }
+            li:nth-child(3){
+                transform: rotateY(-21deg);
+                transition: 1.4s;
+            }
+            li:nth-child(4){
+                transform: rotateY(-19deg);
+                transition: 1.1s;
+            }
+            li:nth-child(5){
+                transform: rotateY(-17deg);
+                transition: 0.8s;
+            }
+            li:nth-child(6){
+                transform: rotateY(-15deg);
+                transition: 0.5s;
+            }
+            li:nth-child(7){
+                transform: rotateY(-13deg);
+            }
+
+
+            ul:hover li:nth-child(1){
+                transform: rotateY(-180deg);
+                transition: 1.4s;
+            }
+            ul:hover li:nth-child(2){
+                transform: rotateY(-180deg);
+                transition: 2.4s;
+            }
+            ul:hover li:nth-child(3){
+                transform: rotateY(-180deg);
+                transition: 3.4s;
+            }
+            ul:hover li:nth-child(4){
+                transform: rotateY(-180deg);
+                transition: 4.4s;
+            }
+            ul:hover li:nth-child(5){
+                transform: rotateY(-180deg);
+                transition: 5.4s;
+            }
+            ul:hover li:nth-child(6){
+                transform: rotateY(-180deg);
+                transition: 6.4s;
+            }
+            
+    </style>
+</head>
+<body>
+    <!--创建画布-->
+    <canvas id="starfield"></canvas>
+    <button id="return-home" class="button" onclick="history.back()">返回</button>
+	<ul>
+            <li><img src="http://eeee.ldyyun.icu/as0/QQ%E6%88%AA%E5%9B%BE20240507145149.png"></li>
+            <li><img src="http://eeee.ldyyun.icu/as0/QQ%E5%9B%BE%E7%89%8720240505202230.jpg"></li>
+            <li><img src="http://eeee.ldyyun.icu/as0/QQ%E5%9B%BE%E7%89%8720240505202242.jpg"></li>
+            <li><img src="http://eeee.ldyyun.icu/as0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240320144103.jpg"></li>
+            <li><img src="http://eeee.ldyyun.icu/as0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240320144200.jpg"></li>
+            <li><img src="http://eeee.ldyyun.icu/as0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240312154351.png"></li>
+            <li><img src="http://eeee.ldyyun.icu/as0/QQ%E5%9B%BE%E7%89%8720240505202250.jpg"></li>
+
+        </ul>
+ <script>
+        var canvas;
+        var stars_count;
+        var stars;
+        ini();
+        makeStars();
+        var interval = setInterval(function () { drawStars(); }, 50); //定时刷新星星数据
+
+        function ini() {//初始化
+            canvas = document.getElementById("starfield");
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            context = canvas.getContext("2d");
+            stars = Array();//数组存放随机生成的星星数据（x,y,大小，颜色，速度）
+            stars_count = 300;//星星数量
+            clearInterval(interval);
+        }
+
+        function makeStars() {//随机生成星星数据
+            for (var i = 0; i < stars_count; i++) {
+                let x = Math.random() * canvas.offsetWidth;
+                let y = Math.random() * canvas.offsetHeight;
+                let radius = Math.random() * 1.0;
+                let color = "rgba(" + Math.random() * 255 + "," + Math.random() * 255 + "," + Math.random() * 255 + ",0.8)";
+                let speed = Math.random() * 4 + 1;
+                let arr = { 'x': x, 'y': y, 'radius': radius, 'color': color, 'speed': speed };//（x,y,大小，颜色，速度）
+                stars.push(arr);//随机生成的星星数据存在这里
+            }
+        }
+
+        function drawStars() {//把星星画到画布上
+            context.fillStyle = "#0e1729";
+            context.fillRect(0, 0, canvas.width, canvas.height);
+            for (var i = 0; i < stars.length; i++) {
+                var x = stars[i]['x'] - stars[i]['speed'];
+                if (x < -2 * stars[i]['radius']) x = canvas.width;
+                stars[i]['x'] = x;
+                var y = stars[i]['y'];
+                var radius = stars[i]['radius'];
+                context.beginPath();
+                context.arc(x, y, radius * 2, 0, 2 * Math.PI);
+                context.fillStyle = stars[i]['color']; // 使用星星自带的颜色
+                context.fill();
+            }
+        }
+
+        window.onresize = function () {//窗口大小发生变化时重新随机生成星星数据
+            ini();
+            makeStars();
+            interval = setInterval(function () { drawStars(); }, 50);
+        }
+</script>
+</body>
+</html>

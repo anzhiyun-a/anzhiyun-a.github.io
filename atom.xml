@@ -6,7 +6,7 @@
   <link href="https://www.ldyyun.icu/atom.xml" rel="self"/>
   
   <link href="https://www.ldyyun.icu/"/>
-  <updated>2024-05-07T09:40:12.731Z</updated>
+  <updated>2024-05-08T09:15:01.376Z</updated>
   <id>https://www.ldyyun.icu/</id>
   
   <author>
@@ -17,18 +17,64 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Oracle</title>
+    <link href="https://www.ldyyun.icu/%E6%95%B0%E6%8D%AE%E5%BA%93/dc60cb0a360e/"/>
+    <id>https://www.ldyyun.icu/%E6%95%B0%E6%8D%AE%E5%BA%93/dc60cb0a360e/</id>
+    <published>2024-05-08T03:31:32.000Z</published>
+    <updated>2024-05-08T09:15:01.376Z</updated>
+    
+    <content type="html"><![CDATA[<p>数据库</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;数据库&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="数据库" scheme="https://www.ldyyun.icu/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>图床</title>
+    <link href="https://www.ldyyun.icu/%E9%9A%8F%E8%AE%B0/5454713e1778/"/>
+    <id>https://www.ldyyun.icu/%E9%9A%8F%E8%AE%B0/5454713e1778/</id>
+    <published>2024-05-08T02:46:24.000Z</published>
+    <updated>2024-05-08T09:14:51.104Z</updated>
+    
+    <content type="html"><![CDATA[<p>asd</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;asd&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="随记" scheme="https://www.ldyyun.icu/categories/%E9%9A%8F%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
-    <link href="https://www.ldyyun.icu/posts/abbrlink.html"/>
-    <id>https://www.ldyyun.icu/posts/abbrlink.html</id>
+    <link href="https://www.ldyyun.icu/%E9%9A%8F%E8%AE%B0/8a5634c456f6/"/>
+    <id>https://www.ldyyun.icu/%E9%9A%8F%E8%AE%B0/8a5634c456f6/</id>
     <published>2024-04-30T16:00:00.000Z</published>
-    <updated>2024-05-07T09:40:12.731Z</updated>
+    <updated>2024-05-09T02:15:08.710Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="欢迎来到我的博客"><a href="#欢迎来到我的博客" class="headerlink" title="欢迎来到我的博客"></a>欢迎来到我的博客</h2><p>欢迎来到我的博客，这里记录了我的学习、生活、思考和感悟。<br>从HELLO WORLD开始吧！<br>据说第一个程序就是hello world,我也不例外。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    printf(&quot;Hello World\n&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+    <summary type="html">&lt;h2 id=&quot;欢迎来到我的博客&quot;&gt;&lt;a href=&quot;#欢迎来到我的博客&quot; class=&quot;headerlink&quot; title=&quot;欢迎来到我的博客&quot;&gt;&lt;/a&gt;欢迎来到我的博客&lt;/h2&gt;&lt;p&gt;欢迎来到我的博客，这里记录了我的学习、生活、思考和感悟。&lt;br&gt;从HELLO WORLD开始</summary>
       
     
     
