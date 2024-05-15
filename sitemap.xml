@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.ldyyun.icu/Linux/2646f812fb69/</loc>
+    
+    <lastmod>2024-05-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ldyyun.icu/%E6%95%B0%E6%8D%AE%E5%BA%93/dc60cb0a360e/</loc>
     
     <lastmod>2024-05-09</lastmod>
@@ -94,7 +103,7 @@
 
   <url>
     <loc>https://www.ldyyun.icu/</loc>
-    <lastmod>2024-05-10</lastmod>
+    <lastmod>2024-05-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -104,14 +113,21 @@
   
   <url>
     <loc>https://www.ldyyun.icu/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2024-05-10</lastmod>
+    <lastmod>2024-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ldyyun.icu/categories/%E9%9A%8F%E8%AE%B0/</loc>
-    <lastmod>2024-05-10</lastmod>
+    <lastmod>2024-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ldyyun.icu/categories/Linux/</loc>
+    <lastmod>2024-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
