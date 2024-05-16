@@ -13,7 +13,7 @@
   <url>
     <loc>https://www.ldyyun.icu/%E6%95%B0%E6%8D%AE%E5%BA%93/dc60cb0a360e/</loc>
     
-    <lastmod>2024-05-09</lastmod>
+    <lastmod>2024-05-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,16 +22,7 @@
   <url>
     <loc>https://www.ldyyun.icu/%E9%9A%8F%E8%AE%B0/5454713e1778/</loc>
     
-    <lastmod>2024-05-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ldyyun.icu/photo/index.html</loc>
-    
-    <lastmod>2024-05-09</lastmod>
+    <lastmod>2024-05-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +31,16 @@
   <url>
     <loc>https://www.ldyyun.icu/%E9%9A%8F%E8%AE%B0/8a5634c456f6/</loc>
     
-    <lastmod>2024-05-09</lastmod>
+    <lastmod>2024-05-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ldyyun.icu/photo/index.html</loc>
+    
+    <lastmod>2024-05-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -108,6 +108,34 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://www.ldyyun.icu/tags/Oracle/</loc>
+    <lastmod>2024-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ldyyun.icu/tags/hello-world/</loc>
+    <lastmod>2024-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ldyyun.icu/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2024-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ldyyun.icu/tags/Linux/</loc>
+    <lastmod>2024-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 
   

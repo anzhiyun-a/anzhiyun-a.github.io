@@ -6,7 +6,7 @@
   <link href="https://www.ldyyun.icu/atom.xml" rel="self"/>
   
   <link href="https://www.ldyyun.icu/"/>
-  <updated>2024-05-16T05:44:46.307Z</updated>
+  <updated>2024-05-16T08:04:10.454Z</updated>
   <id>https://www.ldyyun.icu/</id>
   
   <author>
@@ -21,21 +21,21 @@
     <link href="https://www.ldyyun.icu/Linux/2646f812fb69/"/>
     <id>https://www.ldyyun.icu/Linux/2646f812fb69/</id>
     <published>2024-05-15T03:18:44.000Z</published>
-    <updated>2024-05-16T05:44:46.307Z</updated>
+    <updated>2024-05-16T08:04:10.454Z</updated>
     
     <content type="html"><![CDATA[<p>在进行数据库备份的时候，我们一般都是将数据备份到数据库这台服务器上，那么为了防止出现意外情况（服务器停电、服务器损坏等）而造成数据丢失、应用程序丢失，我们进行双重备份。将数据库服务器的数据进行异地备份。</p><p>这里我们将数据库先备份到本地服务器，然后利用scp命令将备份文件远程复制到远程机上。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r local_folder remote_username@remote_ip:remote_folder </span><br></pre></td></tr></table></figure><ul><li>local_folder 是本地服务器的数据库文件的路径。</li><li>remote_username 是远程机的用户名。</li><li>remote_ip 是远程机的IP地址。</li><li>remote_folder 是存放到远程机的路径。</li></ul><p>出错了, — _—!</p><p><img src="http://eeee.ldyyun.icu/as0/图片1.png" alt></p><p>原来我远程备份的是Windows系统，Windows系统是没有ssh服务需要安装一个客户端来提供服务，这里选择的工具是“Bitvise SSH Server”（下载方式很多，百度上搜索一下）。</p><ol><li>运行安装exe文件,按照操作步骤进行安装。</li></ol><p>​    勾选“I agree……”，可自定义选择安装路径，然后点击Install按钮</p><p><img src="http://eeee.ldyyun.icu/as0/QQ图片20240515161024.png" style="zoom: 67%;"></p><p>​        选择“Personal edition”，点击OK按钮。</p><p>​                                                                             <img src="http://eeee.ldyyun.icu/as0/QQ图片20240515161552.png" style="zoom:67%;"></p><p>​        输入名字信息(可以随便输入)，然后点击OK按钮</p><p><img src="http://eeee.ldyyun.icu/as0/QQ图片20240515161819.png" style="zoom:67%;"></p><p>​    点击“OK”按钮。</p><p><img src="http://eeee.ldyyun.icu/as0/QQ图片20240515161927.png" style="zoom:67%;"></p><p>​    点击“Open easy setting”，打开配置页面</p><p><img src="http://eeee.ldyyun.icu/as0/QQ图片20240515162033.png" style="zoom: 50%;"></p><p>​    选择“Open port(s) to any computer”,然后点击Next按钮</p><p><img src="http://eeee.ldyyun.icu/as0/QQ%E6%88%AA%E5%9B%BE20240516091350.png" style="zoom:50%;"></p><p>​    去掉图中的勾选项，不让使用windows账号登陆。然后点击“3.Virtual accounts”选项卡。</p><p><img src="http://eeee.ldyyun.icu/as0/QQ截图20240515162348.png" style="zoom:50%;"></p><p>​    点击add按钮，创建一个虚拟账户</p><p><img src="http://eeee.ldyyun.icu/as0/QQ截图20240515162439.png" style="zoom:50%;"></p><p>先输入用户名，然后勾选，设置密码</p><p><img src="http://eeee.ldyyun.icu/as0/QQ截图20240515162749.png" style="zoom:50%;"></p><p>​    点击“Save changes”按钮，回到主面板。</p><p><img src="http://eeee.ldyyun.icu/as0/QQ截图20240515162905.png" style="zoom:50%;"></p><p>​    在主面板上点击Start Server按键。</p><p><img src="http://eeee.ldyyun.icu/as0/QQ截图20240515163028.png" style="zoom:50%;"></p><p>​    然后执行cmd进入命令行输入框，执行“netstat -ano | findstr 22”命令，查看22（ssh）端口是否开启。</p><p><img src="http://eeee.ldyyun.icu/as0/QQ截图20240515163145.png" style="zoom:50%;"></p><p>​    显然22（SSH）端口已经开启。</p><ol><li><p>登陆Linux系统，执行scp命令向winserver服务器拷贝文件，查看结果。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;hello world&quot; &gt;&gt; a.txt</span><br><span class="line"></span><br><span class="line">scp a.txt sshuser@10.2.3.210:/D:/key</span><br><span class="line"> </span><br><span class="line">The authenticity of host &#x27;10.2.3.210 (10.2.3.210)&#x27; can&#x27;t be established.</span><br><span class="line">DSA key fingerprint is 71:b2:88:c7:f7:cd:b9:ec:31:2e:13:54:6b:76:0f:8c [MD5].</span><br><span class="line">Are you sure you want to continue connecting (yes/no)? yes</span><br><span class="line"></span><br><span class="line">Warning: Permanently added &#x27;10.2.3.210&#x27; (DSA) to the list of known hosts.</span><br><span class="line"></span><br><span class="line">sshuser@10.2.3.210&#x27;s password:      【这里输入sshuser用户的密码】</span><br><span class="line"></span><br><span class="line">a.txt        100%  12    0.0KB/s  00:00   </span><br></pre></td></tr></table></figure><p>在windows系统查看文件是否复制过来。</p></li><li><p>登陆Linux主机，在相关用户下执行如下命令，生成公钥：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa (连续三次回车,可以生成公钥和私钥)</span><br></pre></td></tr></table></figure><p>将在Linux主机的当前用户HOME目录下的.ssh目录,生成id_rsa.pub和id_rsa,其中,id_rsa是密匙,id_rsa.pub是公匙。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> cd ~/.ssh</span><br><span class="line"> </span><br><span class="line"> scp id_rsa.pub sshuser@10.2.3.210:/D:/key/</span><br><span class="line"> </span><br><span class="line"> sshuser@10.2.3.210&#x27;s password:          【这里输入sshuser用户的密码】</span><br><span class="line"></span><br><span class="line">id_rsa.pub      100%  399    0.4KB/s  00:00</span><br></pre></td></tr></table></figure></li><li><p>将公匙导入到WinSSHD</p><p>进入Open easy setting–&gt;Virtual accounts选项卡，点击Edit按钮</p><p><img src="http://eeee.ldyyun.icu/as0/QQ截图20240515163813.png" style="zoom:50%;"></p></li></ol><p>​    点击“Public keys”</p><p><img src="http://eeee.ldyyun.icu/as0/QQ图片20240515164043.png" style="zoom:50%;"></p><p>​    点击Import，导入刚才从Linux系统传过来的公钥（authorized_keys），然后点击Close。</p><p><img src="http://eeee.ldyyun.icu/as0/QQ截图20240515164213.png" style="zoom:50%;"></p><p>​    点击OK按钮。</p><p><img src="http://eeee.ldyyun.icu/as0/QQ截图20240515164312.png" style="zoom:50%;"></p><ol><li><p>再次通过Linux系统进行传输，检查能否正常传输。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scp id_rsa.pub sshuser@10.2.3.210:/D:/key/</span><br><span class="line"></span><br><span class="line">id_rsa.pub   100% 399  0.4KB/s 00:00</span><br></pre></td></tr></table></figure><p>显然已经得到认证，无需输入密码即可进行传输。</p></li></ol>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;在进行数据库备份的时候，我们一般都是将数据备份到数据库这台服务器上，那么为了防止出现意外情况（服务器停电、服务器损坏等）而造成数据丢失、应用程序丢失，我们进行双重备份。将数据库服务器的数据进行异地备份。&lt;/p&gt;
-&lt;p&gt;这里我们将数据库先备份到本地服务器，然后利用scp命令将</summary>
-      
+    <summary type="html">关于Linux向Windows传输文件</summary>
     
     
     
     <category term="Linux" scheme="https://www.ldyyun.icu/categories/Linux/"/>
     
+    
+    <category term="数据库" scheme="https://www.ldyyun.icu/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="Linux" scheme="https://www.ldyyun.icu/tags/Linux/"/>
     
   </entry>
   
@@ -44,21 +44,19 @@
     <link href="https://www.ldyyun.icu/%E6%95%B0%E6%8D%AE%E5%BA%93/dc60cb0a360e/"/>
     <id>https://www.ldyyun.icu/%E6%95%B0%E6%8D%AE%E5%BA%93/dc60cb0a360e/</id>
     <published>2024-05-08T03:31:32.000Z</published>
-    <updated>2024-05-09T08:06:39.476Z</updated>
+    <updated>2024-05-16T07:57:37.886Z</updated>
     
     <content type="html"><![CDATA[<p>数据库</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;数据库&lt;/p&gt;
-</summary>
-      
+    <summary type="html">关于Oracle数据库的笔记</summary>
     
     
     
     <category term="数据库" scheme="https://www.ldyyun.icu/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
+    
+    <category term="Oracle" scheme="https://www.ldyyun.icu/tags/Oracle/"/>
     
   </entry>
   
@@ -67,15 +65,12 @@
     <link href="https://www.ldyyun.icu/%E9%9A%8F%E8%AE%B0/5454713e1778/"/>
     <id>https://www.ldyyun.icu/%E9%9A%8F%E8%AE%B0/5454713e1778/</id>
     <published>2024-05-08T02:46:24.000Z</published>
-    <updated>2024-05-09T07:18:55.907Z</updated>
+    <updated>2024-05-16T07:57:09.992Z</updated>
     
     <content type="html"><![CDATA[<h1 id="PicGo-七牛云图床"><a href="#PicGo-七牛云图床" class="headerlink" title="PicGo-七牛云图床"></a>PicGo-七牛云图床</h1>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h1 id=&quot;PicGo-七牛云图床&quot;&gt;&lt;a href=&quot;#PicGo-七牛云图床&quot; class=&quot;headerlink&quot; title=&quot;PicGo-七牛云图床&quot;&gt;&lt;/a&gt;PicGo-七牛云图床&lt;/h1&gt;</summary>
-      
+    <summary type="html">利用七牛云搭建一个图床</summary>
     
     
     
@@ -89,20 +84,19 @@
     <link href="https://www.ldyyun.icu/%E9%9A%8F%E8%AE%B0/8a5634c456f6/"/>
     <id>https://www.ldyyun.icu/%E9%9A%8F%E8%AE%B0/8a5634c456f6/</id>
     <published>2024-04-30T16:00:00.000Z</published>
-    <updated>2024-05-09T02:15:08.710Z</updated>
+    <updated>2024-05-16T07:56:45.442Z</updated>
     
     <content type="html"><![CDATA[<h2 id="欢迎来到我的博客"><a href="#欢迎来到我的博客" class="headerlink" title="欢迎来到我的博客"></a>欢迎来到我的博客</h2><p>欢迎来到我的博客，这里记录了我的学习、生活、思考和感悟。<br>从HELLO WORLD开始吧！<br>据说第一个程序就是hello world,我也不例外。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    printf(&quot;Hello World\n&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h2 id=&quot;欢迎来到我的博客&quot;&gt;&lt;a href=&quot;#欢迎来到我的博客&quot; class=&quot;headerlink&quot; title=&quot;欢迎来到我的博客&quot;&gt;&lt;/a&gt;欢迎来到我的博客&lt;/h2&gt;&lt;p&gt;欢迎来到我的博客，这里记录了我的学习、生活、思考和感悟。&lt;br&gt;从HELLO WORLD开始</summary>
-      
+    <summary type="html">hello world</summary>
     
     
     
     <category term="随记" scheme="https://www.ldyyun.icu/categories/%E9%9A%8F%E8%AE%B0/"/>
     
+    
+    <category term="hello world" scheme="https://www.ldyyun.icu/tags/hello-world/"/>
     
   </entry>
   
