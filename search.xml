@@ -103,22 +103,22 @@
     
     
     <entry>
-      <title></title>
-      <link href="/manifest.json"/>
-      <url>/manifest.json</url>
+      <title>charts</title>
+      <link href="/charts/index.html"/>
+      <url>/charts/index.html</url>
       
-        <content type="html"><![CDATA[{"name":"安陌夕`Blog","short_name":"安陌夕","theme_color":"#3b70fc","background_color":"#3b70fc","display":"standalone","scope":"/","start_url":"/","icons":[{"src":"/img/siteicon/123.png","sizes":"16x16","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"32x32","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"48x48","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"64x64","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"128x128","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"144x144","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"512x512","type":"image/png"}],"splash_pages":null}]]></content>
+        <content type="html"><![CDATA[<!-- 文章发布时间统计图 --><div id="posts-chart" data-start="2021-01" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章标签统计图 --><div id="tags-chart" data-length="10" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章分类统计图 --><div id="categories-chart" data-parent="true" style="border-radius: 8px; height: 300px; padding: 10px;"></div>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>charts</title>
-      <link href="/charts/index.html"/>
-      <url>/charts/index.html</url>
+      <title></title>
+      <link href="/manifest.json"/>
+      <url>/manifest.json</url>
       
-        <content type="html"><![CDATA[<!-- 文章发布时间统计图 --><div id="posts-chart" data-start="2021-01" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章标签统计图 --><div id="tags-chart" data-length="10" style="border-radius: 8px; height: 300px; padding: 10px;"></div><!-- 文章分类统计图 --><div id="categories-chart" data-parent="true" style="border-radius: 8px; height: 300px; padding: 10px;"></div>]]></content>
+        <content type="html"><![CDATA[{"name":"安陌夕`Blog","short_name":"安陌夕","theme_color":"#3b70fc","background_color":"#3b70fc","display":"standalone","scope":"/","start_url":"/","icons":[{"src":"/img/siteicon/123.png","sizes":"16x16","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"32x32","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"48x48","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"64x64","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"128x128","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"144x144","type":"image/png"},{"src":"/img/siteicon/123.png","sizes":"512x512","type":"image/png"}],"splash_pages":null}]]></content>
       
     </entry>
     
@@ -159,6 +159,17 @@
     
     <entry>
       <title></title>
+      <link href="/js/js_hui.js"/>
+      <url>/js/js_hui.js</url>
+      
+        <content type="html"><![CDATA[var now=new Date;function createtime(){var t=new Date("05/01/2024 00:00:00");now.setTime(now.getTime()+250);var e=(now-t)/1e3/60/60/24,a=Math.floor(e),n=(now-t)/1e3/60/60-24*a,r=Math.floor(n);1==String(r).length&&(r="0"+r);var s=(now-t)/1e3/60-1440*a-60*r,i=Math.floor(s);1==String(i).length&&(i="0"+i);var o=(now-t)/1e3-86400*a-3600*r-60*i,l=Math.round(o);1==String(l).length&&(l="0"+l);let g="";g=r<18&&r>=9?`<img class='boardsign' src='/img/siteicon/123.svg' title='距离月入25k也就还差一个大佬带我~'><span class='textTip'> <br> 本站居然运行了 ${a} 天</span><span id='runtime'> ${r} 小时 ${i} 分 ${l} 秒 </span> <i class='fas fa-heartbeat' style='color:red'></i>`:`<img class='boardsign' src='/img/siteicon/123.svg' title='下班了就该开开心心的玩耍，嘿嘿~'><span class='textTip'> <br> 本站居然运行了 ${a} 天</span><span id='runtime'> ${r} 小时 ${i} 分 ${l} 秒 </span> <i class='fas fa-heartbeat' style='color:red'></i>`,document.getElementById("workboard")&&(document.getElementById("workboard").innerHTML=g)}setInterval((()=>{createtime()}),250);]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/js/cat.js"/>
       <url>/js/cat.js</url>
       
@@ -181,17 +192,6 @@
     
     <entry>
       <title></title>
-      <link href="/js/light.js"/>
-      <url>/js/light.js</url>
-      
-        <content type="html"><![CDATA[// 霓虹灯效果// 颜色数组var arr = ["#39c5bb", "#f14747", "#f1a247", "#f1ee47", "#b347f1", "#1edbff", "#ed709b", "#5636ed"];// 颜色索引var idx = 0;// 切换颜色function changeColor() {    // 仅夜间模式才启用    if (document.getElementsByTagName('html')[0].getAttribute('data-theme') == 'dark') {        if (document.getElementById("site-name"))            document.getElementById("site-name").style.textShadow = arr[idx] + " 0 0 15px";        if (document.getElementById("site-title"))            document.getElementById("site-title").style.textShadow = arr[idx] + " 0 0 15px";        if (document.getElementById("site-subtitle"))            document.getElementById("site-subtitle").style.textShadow = arr[idx] + " 0 0 10px";        if (document.getElementById("post-info"))            document.getElementById("post-info").style.textShadow = arr[idx] + " 0 0 5px";        try {            document.getElementsByClassName("author-info__name")[0].style.textShadow = arr[idx] + " 0 0 12px";            document.getElementsByClassName("author-info__description")[0].style.textShadow = arr[idx] + " 0 0 12px";        } catch {                    }        idx++;        if (idx == 8) {            idx = 0;        }    } else {        // 白天模式恢复默认        if (document.getElementById("site-name"))            document.getElementById("site-name").style.textShadow = "#1e1e1ee0 1px 1px 1px";        if (document.getElementById("site-title"))            document.getElementById("site-title").style.textShadow = "#1e1e1ee0 1px 1px 1px";        if (document.getElementById("site-subtitle"))            document.getElementById("site-subtitle").style.textShadow = "#1e1e1ee0 1px 1px 1px";        if (document.getElementById("post-info"))            document.getElementById("post-info").style.textShadow = "#1e1e1ee0 1px 1px 1px";        try {            document.getElementsByClassName("author-info__name")[0].style.textShadow = "";            document.getElementsByClassName("author-info__description")[0].style.textShadow = "";        } catch {                    }    }}// 开启计时器window.onload = setInterval(changeColor, 1200);]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/js/ali_font.js"/>
       <url>/js/ali_font.js</url>
       
@@ -203,32 +203,10 @@
     
     <entry>
       <title></title>
-      <link href="/js/js_hui.js"/>
-      <url>/js/js_hui.js</url>
+      <link href="/js/light.js"/>
+      <url>/js/light.js</url>
       
-        <content type="html"><![CDATA[var now=new Date;function createtime(){var t=new Date("05/01/2024 00:00:00");now.setTime(now.getTime()+250);var e=(now-t)/1e3/60/60/24,a=Math.floor(e),n=(now-t)/1e3/60/60-24*a,r=Math.floor(n);1==String(r).length&&(r="0"+r);var s=(now-t)/1e3/60-1440*a-60*r,i=Math.floor(s);1==String(i).length&&(i="0"+i);var o=(now-t)/1e3-86400*a-3600*r-60*i,l=Math.round(o);1==String(l).length&&(l="0"+l);let g="";g=r<18&&r>=9?`<img class='boardsign' src='/img/siteicon/123.svg' title='距离月入25k也就还差一个大佬带我~'><span class='textTip'> <br> 本站居然运行了 ${a} 天</span><span id='runtime'> ${r} 小时 ${i} 分 ${l} 秒 </span> <i class='fas fa-heartbeat' style='color:red'></i>`:`<img class='boardsign' src='/img/siteicon/123.svg' title='下班了就该开开心心的玩耍，嘿嘿~'><span class='textTip'> <br> 本站居然运行了 ${a} 天</span><span id='runtime'> ${r} 小时 ${i} 分 ${l} 秒 </span> <i class='fas fa-heartbeat' style='color:red'></i>`,document.getElementById("workboard")&&(document.getElementById("workboard").innerHTML=g)}setInterval((()=>{createtime()}),250);]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/js/universe.js"/>
-      <url>/js/universe.js</url>
-      
-        <content type="html"><![CDATA[function dark() {window.requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var n,e,i,h,t=.05,s=document.getElementById("universe"),o=!0,a="180,184,240",r="226,225,142",d="226,225,224",c=[];function f(){n=window.innerWidth,e=window.innerHeight,i=.216*n,s.setAttribute("width",n),s.setAttribute("height",e)}function u(){h.clearRect(0,0,n,e);for(var t=c.length,i=0;i<t;i++){var s=c[i];s.move(),s.fadeIn(),s.fadeOut(),s.draw()}}function y(){this.reset=function(){this.giant=m(3),this.comet=!this.giant&&!o&&m(10),this.x=l(0,n-10),this.y=l(0,e),this.r=l(1.1,2.6),this.dx=l(t,6*t)+(this.comet+1-1)*t*l(50,120)+2*t,this.dy=-l(t,6*t)-(this.comet+1-1)*t*l(50,120),this.fadingOut=null,this.fadingIn=!0,this.opacity=0,this.opacityTresh=l(.2,1-.4*(this.comet+1-1)),this.do=l(5e-4,.002)+.001*(this.comet+1-1)},this.fadeIn=function(){this.fadingIn&&(this.fadingIn=!(this.opacity>this.opacityTresh),this.opacity+=this.do)},this.fadeOut=function(){this.fadingOut&&(this.fadingOut=!(this.opacity<0),this.opacity-=this.do/2,(this.x>n||this.y<0)&&(this.fadingOut=!1,this.reset()))},this.draw=function(){if(h.beginPath(),this.giant)h.fillStyle="rgba("+a+","+this.opacity+")",h.arc(this.x,this.y,2,0,2*Math.PI,!1);else if(this.comet){h.fillStyle="rgba("+d+","+this.opacity+")",h.arc(this.x,this.y,1.5,0,2*Math.PI,!1);for(var t=0;t<30;t++)h.fillStyle="rgba("+d+","+(this.opacity-this.opacity/20*t)+")",h.rect(this.x-this.dx/4*t,this.y-this.dy/4*t-2,2,2),h.fill()}else h.fillStyle="rgba("+r+","+this.opacity+")",h.rect(this.x,this.y,this.r,this.r);h.closePath(),h.fill()},this.move=function(){this.x+=this.dx,this.y+=this.dy,!1===this.fadingOut&&this.reset(),(this.x>n-n/4||this.y<0)&&(this.fadingOut=!0)},setTimeout(function(){o=!1},50)}function m(t){return Math.floor(1e3*Math.random())+1<10*t}function l(t,i){return Math.random()*(i-t)+t}f(),window.addEventListener("resize",f,!1),function(){h=s.getContext("2d");for(var t=0;t<i;t++)c[t]=new y,c[t].reset();u()}(),function t(){document.getElementsByTagName('html')[0].getAttribute('data-theme')=='dark'&&u(),window.requestAnimationFrame(t)}()};dark()]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>音乐馆</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
-      
-        <content type="html"><![CDATA[<p><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> </p><p><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script> </p><p><script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script><br>    <div id="aplayer-QbrnlcES" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="7868005687" data-server="tencent" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="1000px" data-preload="auto" data-theme="#555"></div></p>]]></content>
+        <content type="html"><![CDATA[// 霓虹灯效果// 颜色数组var arr = ["#39c5bb", "#f14747", "#f1a247", "#f1ee47", "#b347f1", "#1edbff", "#ed709b", "#5636ed"];// 颜色索引var idx = 0;// 切换颜色function changeColor() {    // 仅夜间模式才启用    if (document.getElementsByTagName('html')[0].getAttribute('data-theme') == 'dark') {        if (document.getElementById("site-name"))            document.getElementById("site-name").style.textShadow = arr[idx] + " 0 0 15px";        if (document.getElementById("site-title"))            document.getElementById("site-title").style.textShadow = arr[idx] + " 0 0 15px";        if (document.getElementById("site-subtitle"))            document.getElementById("site-subtitle").style.textShadow = arr[idx] + " 0 0 10px";        if (document.getElementById("post-info"))            document.getElementById("post-info").style.textShadow = arr[idx] + " 0 0 5px";        try {            document.getElementsByClassName("author-info__name")[0].style.textShadow = arr[idx] + " 0 0 12px";            document.getElementsByClassName("author-info__description")[0].style.textShadow = arr[idx] + " 0 0 12px";        } catch {                    }        idx++;        if (idx == 8) {            idx = 0;        }    } else {        // 白天模式恢复默认        if (document.getElementById("site-name"))            document.getElementById("site-name").style.textShadow = "#1e1e1ee0 1px 1px 1px";        if (document.getElementById("site-title"))            document.getElementById("site-title").style.textShadow = "#1e1e1ee0 1px 1px 1px";        if (document.getElementById("site-subtitle"))            document.getElementById("site-subtitle").style.textShadow = "#1e1e1ee0 1px 1px 1px";        if (document.getElementById("post-info"))            document.getElementById("post-info").style.textShadow = "#1e1e1ee0 1px 1px 1px";        try {            document.getElementsByClassName("author-info__name")[0].style.textShadow = "";            document.getElementsByClassName("author-info__description")[0].style.textShadow = "";        } catch {                    }    }}// 开启计时器window.onload = setInterval(changeColor, 1200);]]></content>
       
     </entry>
     
@@ -262,6 +240,28 @@
       <url>/photo/beijing/index.html</url>
       
         <content type="html"><![CDATA[<div class="tip cogs"><p>人的一生，可能会遇见很多人，走很多路，赏很多景，但愿我们都岁月无波澜，余生不悲欢。</p><p>回首向来萧瑟处，归去，也无风雨也无晴。</p></div><div class="gallery-container" data-type="data" data-button>      <div class="gallery-data">[{"url":"https://eeee.ldyyun.icu/as0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240312154001.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240320144221.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/QQ%E5%9B%BE%E7%89%8720240505202253.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240312154119.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240312154137.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240312154021.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240320144055.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240320144044.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240312154230.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240320144200.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/QQ%E5%9B%BE%E7%89%8720240505202210.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/QQ%E5%9B%BE%E7%89%8720240505202235.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/QQ%E5%9B%BE%E7%89%8720240505202238.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240320144146.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/QQ%E5%9B%BE%E7%89%8720240505202225.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/QQ%E5%9B%BE%E7%89%8720240505202230.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/QQ%E5%9B%BE%E7%89%8720240505202242.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/QQ%E5%9B%BE%E7%89%8720240505202246.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/QQ%E5%9B%BE%E7%89%8720240505202250.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240320144141.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240320144130.jpg","alt":""},{"url":"https://eeee.ldyyun.icu/as0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240312154351.png","alt":""}]</div>      <div class="gallery-items">      </div>    </div>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>音乐馆</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
+      
+        <content type="html"><![CDATA[<p><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> </p><p><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script> </p><p><script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script><br>    <div id="aplayer-YRxuoRfv" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="7868005687" data-server="tencent" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="1000px" data-preload="auto" data-theme="#555"></div></p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/universe.js"/>
+      <url>/js/universe.js</url>
+      
+        <content type="html"><![CDATA[function dark() {window.requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var n,e,i,h,t=.05,s=document.getElementById("universe"),o=!0,a="180,184,240",r="226,225,142",d="226,225,224",c=[];function f(){n=window.innerWidth,e=window.innerHeight,i=.216*n,s.setAttribute("width",n),s.setAttribute("height",e)}function u(){h.clearRect(0,0,n,e);for(var t=c.length,i=0;i<t;i++){var s=c[i];s.move(),s.fadeIn(),s.fadeOut(),s.draw()}}function y(){this.reset=function(){this.giant=m(3),this.comet=!this.giant&&!o&&m(10),this.x=l(0,n-10),this.y=l(0,e),this.r=l(1.1,2.6),this.dx=l(t,6*t)+(this.comet+1-1)*t*l(50,120)+2*t,this.dy=-l(t,6*t)-(this.comet+1-1)*t*l(50,120),this.fadingOut=null,this.fadingIn=!0,this.opacity=0,this.opacityTresh=l(.2,1-.4*(this.comet+1-1)),this.do=l(5e-4,.002)+.001*(this.comet+1-1)},this.fadeIn=function(){this.fadingIn&&(this.fadingIn=!(this.opacity>this.opacityTresh),this.opacity+=this.do)},this.fadeOut=function(){this.fadingOut&&(this.fadingOut=!(this.opacity<0),this.opacity-=this.do/2,(this.x>n||this.y<0)&&(this.fadingOut=!1,this.reset()))},this.draw=function(){if(h.beginPath(),this.giant)h.fillStyle="rgba("+a+","+this.opacity+")",h.arc(this.x,this.y,2,0,2*Math.PI,!1);else if(this.comet){h.fillStyle="rgba("+d+","+this.opacity+")",h.arc(this.x,this.y,1.5,0,2*Math.PI,!1);for(var t=0;t<30;t++)h.fillStyle="rgba("+d+","+(this.opacity-this.opacity/20*t)+")",h.rect(this.x-this.dx/4*t,this.y-this.dy/4*t-2,2,2),h.fill()}else h.fillStyle="rgba("+r+","+this.opacity+")",h.rect(this.x,this.y,this.r,this.r);h.closePath(),h.fill()},this.move=function(){this.x+=this.dx,this.y+=this.dy,!1===this.fadingOut&&this.reset(),(this.x>n-n/4||this.y<0)&&(this.fadingOut=!0)},setTimeout(function(){o=!1},50)}function m(t){return Math.floor(1e3*Math.random())+1<10*t}function l(t,i){return Math.random()*(i-t)+t}f(),window.addEventListener("resize",f,!1),function(){h=s.getContext("2d");for(var t=0;t<i;t++)c[t]=new y,c[t].reset();u()}(),function t(){document.getElementsByTagName('html')[0].getAttribute('data-theme')=='dark'&&u(),window.requestAnimationFrame(t)}()};dark()]]></content>
       
     </entry>
     
